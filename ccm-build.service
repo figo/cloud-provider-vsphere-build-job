@@ -1,0 +1,7 @@
+[Unit]
+Description=build ccm and upload to dockerhub
+
+[Service]
+EnvironmentFile=./ccm-make/docker-envs
+Type=oneshot
+ExecStart=/usr/bin/sh ./ccm-make/make.sh
